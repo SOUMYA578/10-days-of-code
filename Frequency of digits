@@ -1,0 +1,20 @@
+#include<stdio.h>
+void main()
+{
+int N,D,num,count=0;
+printf("Enter the number:\n");
+scanf("%d",&N);
+printf("Enter the digit:\n");
+scanf("%d",&D):
+while(N>0)
+{
+  num=N%10;
+  if(num==D)
+{
+  count++;
+}
+  N=N/10;
+}
+printf("The digit frquency of given digit is:%d",count);
+}
+
