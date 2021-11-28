@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int i,j,n,a[50][50],d1=0,d2=0,diff=0;
+    printf("Enter the order of matrix:\n");
+    scanf("%d",&n);
+    printf("Enter the matrix elements:\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        d1+=a[i][i];
+    }
+    printf("%d\n",d1);
+    for(i=0;i<n;i++)
+    {
+        d2+=a[i][n-i-1];
+    }
+    printf("%d\n",d2);
+    diff=d1-d2;
+    diff=abs(diff);
+    printf("Absolute Difference=%d",diff);
+}
